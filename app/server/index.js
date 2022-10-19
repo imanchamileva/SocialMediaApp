@@ -1,9 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 const PORT = process.env.PORT || 5000
-const cors = require('cors');
+import cors from 'cors';
 const app = express();
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 import postRoutes from './routes/posts.js';
 
 
