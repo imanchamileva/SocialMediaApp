@@ -1,10 +1,17 @@
 import './App.css';
+import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>lala</h1>
-    </div>
+
+    <Container maxwidth="lg">
+      <AppBar>
+        <Typography>
+          
+        </Typography>
+      </AppBar>
+    </Container>
   );
 }
 
