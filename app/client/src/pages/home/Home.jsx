@@ -5,8 +5,8 @@ const Home = () => {
     return (
         <div className="relative flex flex-row w-full h-screen">
             <ProfileSide />
-            <div className="w-2/4  h-screen">Posts</div>
-            <div className="w-1/4  h-screen">Right side</div>
+            <div className="w-1/3  h-screen">Posts</div>
+            <div className="w-1/3  h-screen">Right side</div>
         </div>
     )
 }
