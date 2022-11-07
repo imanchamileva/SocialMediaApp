@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import postRoutes from './routes/AuthRoute.js';
 import dotenv from 'dotenv';
 import AuthRoute from './routes/AuthRoute.js';
 
@@ -12,9 +11,6 @@ dotenv.config()
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
-
-app.use('/posts', postRoutes)
-
 
 
 const uri = process.env.MONGO_DB;
