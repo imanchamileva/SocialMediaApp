@@ -4,6 +4,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import AuthRoute from './routes/AuthRoute.js';
+import UserRoute from './routes/UserRoute.js';
+
 
 const app = express();
 
@@ -46,3 +48,4 @@ app.listen(process.env.PORT, () => console.log(`server running on port ${process
 //usage of routes
 
 app.use('/auth', AuthRoute)
+app.use('/user', UserRoute)
