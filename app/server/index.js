@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import AuthRoute from './routes/AuthRoute.js';
 import UserRoute from './routes/UserRoute.js';
-
+import PostRoute from './routes/PostRoute.js'
 
 const app = express();
 
@@ -49,3 +49,4 @@ app.listen(process.env.PORT, () => console.log(`server running on port ${process
 
 app.use('/auth', AuthRoute)
 app.use('/user', UserRoute)
+app.use('/post', PostRoute)
