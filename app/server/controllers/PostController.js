@@ -153,10 +153,16 @@ export const getTimelinePosts = async (req, res) => {
             }
 
         ])
-        res.status(200).json(currentUserPosts.concat(followingPosts))
+        res.status(200).json(currentUserPosts.concat(...followingPosts[0].followingPosts))
         // posts from the user he's following 
 
     } catch (error) {
-        res.status(500).json(error)
+        res
+            .status(500)
+            .json(error)
+            .sort((a, b) => {
+                //latest post will appear 1st
+                return b.createdAt - a.createdAt;
+            })
     }
 }
