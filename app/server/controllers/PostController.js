@@ -1,6 +1,6 @@
 import PostModel from '../models/PostModel.js';
 import mongoose from 'mongoose';
-
+import userModel from '../models/userModel.js';
 
 // create new post with body= info
 export const createPost = async (req, res) => {
@@ -98,13 +98,65 @@ export const likePost = async (req, res) => {
     try {
 
         const post = await PostModel.findById(id)
+        // like the post
         if (!post.likes.includes(userId)) {
-            await post.updateOne({$push: {likes: userId} })
+            await post.updateOne({ $push: { likes: userId } })
             res.status(200).json("Post liked")
+        }
+        // dislike the post
+        else {
+            await post.updateOne({ $pull: { likes: userId } })
+            res.status(200).json("Post unliked")
         }
 
     } catch (error) {
         res.status(500).json(error)
 
+    }
+}
+
+// get timeline posts
+
+export const getTimelinePosts = async (req, res) => {
+
+    const userId = req.params.id
+
+    try {
+        // will retirn all the posts from this userid
+        const currentUserPosts = await PostModel.find({ userId: userId })
+
+        const followingPosts = await userModel.aggregate([
+            {
+                // when this query runs, it will give us a single document which will contain our userid and the _id field
+                $match: {
+                    _id: new mongoose.Types.ObjectId(userId)
+                }
+            },
+            {
+                $lookup: {
+                    // posts come from our dbb, we chose posts as name
+                    from: "posts",
+                    // inside our usermodel we have following field
+                    localField: "following",
+                    foreignField: "userId",
+                    // followingposts object
+                    as: "followingPosts"
+                }
+            },
+            {
+                // returntype of aggregation, which fields u want to return as aggregation
+                $project: {
+                    followingPosts: 1,
+                    _id: 0
+
+                }
+            }
+
+        ])
+        res.status(200).json(currentUserPosts.concat(followingPosts))
+        // posts from the user he's following 
+
+    } catch (error) {
+        res.status(500).json(error)
     }
 }
