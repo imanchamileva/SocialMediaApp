@@ -1,7 +1,10 @@
+import PostShare from "../PostShare/PostShare"
 
 function PostSide() {
   return (
-    <div>PostSide</div>
+    <>
+      <PostShare />
+    </>
   )
 }
 

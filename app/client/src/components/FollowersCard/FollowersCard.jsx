@@ -3,7 +3,7 @@ import { Followers } from '../../Data/FollowersData.js'
 
 const FollowersCard = () => {
   return (
-    <div className="pt-4 pl-12">
+    <div className="pt-4 pl-3">
       <div className="pt-4 pl-12">
         <h3>Who is following you?</h3>
       </div>
