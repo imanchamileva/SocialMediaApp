@@ -7,14 +7,14 @@ import { SlControlPlay } from 'react-icons/sl';
 
 const PostShare = () => {
     return (
-        <div className="flex flex-col">
-            <div className="flex flex-row items-center gap-x-3 h-36">
+        <div className="flex flex-col bg-white rounded-lg h-36 items-center justify-center">
+            <div className="flex flex-row items-center  gap-x-3 h-24">
                 <div className="w-12">
                     <img src={profileImg} className=" rounded-full" alt="" />
                 </div>
                 <div className="flex h-20 flex-col justify-evenly">
                     <div>
-                        <input className="rounded-full w-96 h-10" type="text" placeholder="What's new ?" />
+                        <input className="rounded-full w-96 h-10 bg-gray-100" type="text" placeholder="What's new ?" />
                     </div>
                     <div className="flex justify-evenly">
                         <div className="flex flex-row justify-between w-96">
