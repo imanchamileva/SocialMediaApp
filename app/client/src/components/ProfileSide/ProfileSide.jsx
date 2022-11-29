@@ -8,7 +8,7 @@ import LogoSearch from './LogoSearch/LogoSearch'
 
 function ProfileSide() {
   return (
-    <div className="w-2/4  h-screen flex flex-col overflow-auto">
+    <div className="h-screen flex flex-col overflow-auto">
       <LogoSearch />
       <ProfileCard />
       <FollowersCard />

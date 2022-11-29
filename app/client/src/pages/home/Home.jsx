@@ -5,7 +5,7 @@ import ProfileSide from '../../components/ProfileSide/ProfileSide'
 const Home = () => {
     return (
         <div className="relative flex flex-row w-full h-screen">
-            <div className="w-2/4 flex justify-center">
+            <div className="w-1/4 flex justify-center">
             <ProfileSide />
 
             </div>
