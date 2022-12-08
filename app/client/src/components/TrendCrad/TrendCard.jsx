@@ -4,8 +4,8 @@ import { TrendData } from "../../Data/TrendData.js"
 
 function TrendCard() {
     return (
-        <div className="flex items-center flex-col justify-evenly bg-red-500 h-3/5">
-            <div className="p-12 grid gap-y-4 w-72 rounded-lg bg-white justify-evenly">
+        <div className="flex items-center flex-col justify-evenly h-3/5">
+            <div className="p-12 flex flex-col items-start m-4 w-72 rounded-lg bg-white justify-start ">
                 <h3 className="font-bold text-xl">Trends for you</h3>
                 {TrendData.map((data, id) => {
                     return <div className="p-2">
