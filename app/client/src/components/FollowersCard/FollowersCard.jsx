@@ -5,7 +5,7 @@ const FollowersCard = () => {
   return (
     <div className="pt-4 pl-3">
       <div className="pt-4 pl-12">
-        <h3>Who is following you?</h3>
+        <b className="text-lg">Who is following you?</b>
       </div>
       {Followers.map((follower) => {
         return <div className="flex flex-row items-center w-64 justify-between">

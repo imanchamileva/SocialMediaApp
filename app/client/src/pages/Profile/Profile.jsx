@@ -3,7 +3,7 @@ import ProfileLeft from '../../components/ProfileLeft/ProfileLeft'
 
 function Profile() {
   return (
-    <div>
+    <div className="relative">
         <ProfileLeft />
     </div>
   )
