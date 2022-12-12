@@ -5,7 +5,7 @@ import { BsPencil } from 'react-icons/bs';
 
 export const InfoCard = () => {
     return (
-        <div className="bg-white w-72 h-60 rounded-lg flex items-between ml-3 mt-2">
+        <div className="bg-white w-72 mr-3 h-60 rounded-lg flex items-between ml-3 mt-2">
             <div className="flex jsutify-center flex-col w-60 justify-around items-start">
                 <div className="pl-4 flex justify-between items-center flex-row w-72 pr-4">
                     <h3 className="font-bold text-lg">Your Info</h3>
@@ -43,7 +43,7 @@ export const InfoCard = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center w-60">
+                <div className="flex justify-center w-72">
                     <button className="w-36 h-8 rounded-lg text-white bg-orange-500 hover:bg-transparent border-orange-500 hover:text-black border-2  bg-transparent ">Log out</button>
                 </div>
 

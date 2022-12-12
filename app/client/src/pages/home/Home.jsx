@@ -8,15 +8,15 @@ import RightSide from '../../components/RightSide/RightSide'
 
 const Home = () => {
     return (
-        <div className="relative flex flex-row w-full h-screen">
-            <div className="w-1/4 flex justify-center">
+        <div className="relative flex flex-row w-full h-full">
+            <div className="w-1/3 flex justify-center">
             <ProfileSide />
 
             </div>
-            <div className="w-2/4  h-screen">
+            <div className="w-1/3  h-screen">
                 <PostSide />
             </div>
-            <div className="w-1/4  h-screen">
+            <div className="w-1/3  h-screen">
                 <RightSide />
             </div>
 
