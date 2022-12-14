@@ -1,5 +1,5 @@
 import './App.css';
-import Auth, { SignUp } from './pages/Auth/Auth';
+import Auth, { LogIn, SignUp } from './pages/Auth/Auth';
 import Home from './pages/home/Home';
 import Profile from './pages/Profile/Profile';
 
@@ -14,6 +14,7 @@ function App() {
         {/* <Profile /> */}
         <Auth />
         <SignUp />
+        <LogIn />
       </section>
     </>
   );
