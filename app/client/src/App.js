@@ -1,5 +1,5 @@
 import './App.css';
-import Auth from './pages/Auth/Auth';
+import Auth, { SignUp } from './pages/Auth/Auth';
 import Home from './pages/home/Home';
 import Profile from './pages/Profile/Profile';
 
@@ -13,6 +13,7 @@ function App() {
         {/* <Home /> */}
         {/* <Profile /> */}
         <Auth />
+        <SignUp />
       </section>
     </>
   );
