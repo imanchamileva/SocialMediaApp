@@ -9,7 +9,9 @@ const Auth = () => {
             <div>
                 <img src={logo} alt="logo_bird" />
                 <div>
-                    <h1></h1>
+                    <h4>
+                        <LogIn />
+                    </h4>
                 </div>
             </div>
         </div>

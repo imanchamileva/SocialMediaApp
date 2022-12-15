@@ -1,16 +1,25 @@
-import React from 'react'
+import { useState } from 'react'
 import { BsPencil } from 'react-icons/bs';
-
+import ProfileModal from '../ProfileModal/ProfileModal.jsx';
 
 
 export const InfoCard = () => {
+
+    const [modalOpened, setModalOpened] = useState(false)
+
+
+
     return (
         <div className="bg-white w-72 mr-3 h-60 rounded-lg flex items-between ml-3 mt-2">
             <div className="flex jsutify-center flex-col w-60 justify-around items-start">
                 <div className="pl-4 flex justify-between items-center flex-row w-72 pr-4">
                     <h3 className="font-bold text-lg">Your Info</h3>
-                    <div>
-                        <BsPencil className="w-10 h-5" />
+                    
+                    <div className=""  >
+                        <BsPencil className="w-10 h-5 cursor-pointer" onClick={() => setModalOpened(true)}
+                        />
+                        <ProfileModal modalOpened={modalOpened} setModalOpened={setModalOpened}
+                        />
                     </div>
                 </div>
 
